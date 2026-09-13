@@ -5,6 +5,11 @@ Nomor versi mengikuti Semantic Versioning: `MAJOR.MINOR.PATCH`.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-13
+
+Rilis kedua: mode relokasi, berbagi hasil lewat tautan, personalisasi
+rumah tangga, dan pilihan awal yang dikalibrasi ulang.
+
 ### Added
 - Tautan berbagi berversi untuk memulihkan wilayah perbandingan, profil
   rumah tangga, pendapatan/cicilan, mode warna, dan filter legenda.
@@ -22,6 +27,9 @@ Nomor versi mengikuti Semantic Versioning: `MAJOR.MINOR.PATCH`.
   bukti biaya bulanan yang masih belum cukup untuk mengubah dataset.
 - Tombol Bagikan yang memakai share sheet perangkat atau menyalin tautan,
   lengkap dengan penjelasan privasi untuk angka finansial yang ikut dibagikan.
+- Tabel sensitivitas band di panel Tentang: sebaran Nyaman/Cukup/Ketat/Tak
+  Cukup untuk empat profil pembanding, dihitung langsung dari dataset yang
+  dimuat dan dikunci di CI lewat `src/lib/calibration.test.ts`.
 
 ### Changed
 - Roadmap disusun ulang menjadi Now/Next/Later dan diselaraskan dengan status
@@ -32,6 +40,11 @@ Nomor versi mengikuti Semantic Versioning: `MAJOR.MINOR.PATCH`.
 - Preferensi tampilan dan wilayah aktif dinormalisasi sebelum dibaca dari
   localStorage agar state lama atau input yang diedit manual gagal dengan aman;
   counter penggunaan juga dijaga agar tidak melampaui safe integer.
+- Pilihan awal hunian berubah dari "Rumah KPR" ke "Rusun / kost" agar profil
+  awal mendekati penerima upah minimum lajang. Warna awal peta ikut berubah
+  (Nyaman 2 → 27, Tak Cukup 114 → 46 pada dataset v2026.1). Baseline dataset,
+  nilai `costs.json`/`wages.json`, dan ambang band 120/100/80 tidak diubah;
+  alasan lengkapnya di `docs/kalibrasi-default-2026-09.md`.
 
 ## [0.1.0] - 2026-09-03
 

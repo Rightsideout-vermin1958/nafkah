@@ -18,16 +18,17 @@ kebutuhanmu.
 
 Coba di [nafkah.adenaufal.com](https://nafkah.adenaufal.com).
 
-Rilis publik saat ini adalah `v0.1.0`. Aplikasi sudah dideploy, sedangkan kode
+Rilis publik saat ini adalah `v0.2.0`. Aplikasi sudah dideploy, sedangkan kode
 sumber dan dataset tersedia secara terbuka di [repositori GitHub](https://github.com/adenaufal/nafkah).
 
-## Fitur (v0.1.0)
+## Fitur (v0.2.0)
 
 - Peta 514 kabupaten/kota dengan warna untuk kategori Nyaman, Cukup, Ketat,
   dan Tak Cukup. Paletnya mempertimbangkan buta warna; wilayah tanpa data
   juga diberi arsir.
 - Panel asumsi untuk mengatur rumah tangga (lajang, pasangan, atau keluarga),
-  gaya hidup, hunian, transportasi, tabungan, serta upah kotor atau take-home.
+  jumlah anak, gaya hidup, hunian, transportasi, cicilan KPR, tabungan, serta
+  upah kotor atau take-home.
 - Kolom "Pendapatan sendiri" untuk mencoba perhitungan dengan gajimu. Ada
   opsi "2 upah" untuk pasangan bekerja, dengan UMK daerah sebagai pembanding.
 - Baki perbandingan untuk menyematkan hingga 5 wilayah dan melihat rincian
@@ -37,6 +38,11 @@ sumber dan dataset tersedia secara terbuka di [repositori GitHub](https://github
 - Peta dasar Terang, Gelap, dan Satelit tanpa API key, serta mode Offline
   tanpa tile peta.
 - Mode gelap, pencarian wilayah, legenda angka, dan filter tingkat keterjangkauan.
+- Mode relokasi: pisahkan gaji kota asal dari biaya kota tujuan, lalu bagikan
+  hasilnya lewat tautan berversi yang memulihkan wilayah, asumsi, mode warna,
+  dan filter legenda.
+- Panel metode dengan tabel sensitivitas: sebaran band untuk empat profil
+  pembanding, dihitung dari dataset yang sedang dimuat.
 - Navigasi keyboard, label `aria`, dan kontras AA.
 
 ## Teknologi
@@ -75,9 +81,15 @@ ini untuk fork atau domain lain.
 ## Model asumsi & formula
 
 Perhitungan awal memakai profil
-`single · moderate · studio · motorcycle · savings included`.
+`single · moderate · room · motorcycle · savings included`.
 Faktor pengali untuk rumah tangga, gaya hidup, hunian, dan transportasi tersimpan
 per kategori di `src/data/multipliers.ts` dan bisa disesuaikan.
+
+Pilihan awal itu berbeda dari baseline dataset (`studio`, semua pengali ×1).
+Hunian awal memakai rusun/kost karena pembanding utama peta ini adalah penerima
+upah minimum lajang. Alasan, sebaran band sebelum/sesudah, dan batasannya ada di
+[catatan kalibrasi](docs/kalibrasi-default-2026-09.md); panel Tentang di aplikasi
+menampilkan tabel sensitivitasnya langsung dari dataset yang dimuat.
 
 ```text
 totalMonthlyCost   = Σ nilai kategori aktif di bawah asumsi saat ini
