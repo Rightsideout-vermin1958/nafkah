@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: 🗺️ Laporkan angka yang meleset (untuk non-dev)
-    url: https://airtable.com/appri285d7CNF5mqc/pagbuVQAdt3s9mEaV/form
-    about: Angka biaya/upah di daerahmu terasa salah? Lapor di sini — tak perlu paham kode. Sertakan sumber kalau ada.
-  - name: 💡 Saran fitur & diskusi
-    url: https://github.com/adenaufal/nafkah/discussions
-    about: Ide fitur, pertanyaan, atau diskusi umum. Voting lewat reaction 👍.
